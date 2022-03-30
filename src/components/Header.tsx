@@ -1,24 +1,33 @@
 import React from 'react'
 import Nav from '../components/Nav'
 import Search from '../components/Search'
-import Banner from './Logo'
+import Logo from './Logo'
+import Info from './Info'
 
 type Props = {}
 
 const Header = (props: Props) => {
   return (
-    <header>
-      <div>
-        <div>
-          <Banner />
+    <div>
+      <div className="hidden md:block z-[999] bg-black h-11 fixed top-0 left-0 w-full py-3">
+        <div className="container">
+          <div className="flex items-center justify-between">
+            <div>
+              <Search />
+            </div>
+            <div className="flex items-center gap-2">
+              < Info />
+            </div>
+          </div>
         </div>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <Nav />
-          <Search />
-        </nav>
-
       </div>
-    </header>
+      <header id="header" className="hidden lg:block mt-[44px]">
+        <div className="container">
+          <Nav />
+        </div>
+      </header>
+    </div>
+
   )
 }
 

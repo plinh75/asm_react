@@ -2,12 +2,12 @@ import React from 'react'
 
 type Props = {}
 
-const Banner = (props: Props) => {
+const Products = (props: Props) => {
   return (
     <div>
-      
+        
     </div>
   )
 }
 
-export default Banner
+export default Products

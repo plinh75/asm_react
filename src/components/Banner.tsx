@@ -4,9 +4,10 @@ type Props = {}
 
 const Banner = (props: Props) => {
   return (
-    <div className="text-center">
-        <img src="https://img2.thuthuatphanmem.vn/uploads/2019/03/09/anh-bo-hoa-hong-mau-do-dep_114632571.jpg" alt="" className="img-fluid" />
-    </div>
+    <div className="py-2">
+       <img className="w-full pt-3" src="https://shopsonmoi.vn/assets/uploads/files/8ea2b-cover.jpg" />
+
+      </div>
   )
 }
 

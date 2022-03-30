@@ -5,10 +5,7 @@ type Props = {}
 const Search = (props: Props) => {
     return (
         <div>
-            <form className="d-flex px-5">
-                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button className="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <input type="text" placeholder="Tìm kiếm..." className="italic pl-2 text-white bg-transparent border border-solid border-gray-600 rounded-sm focus:border-gray-300" />
         </div>
     )
 }

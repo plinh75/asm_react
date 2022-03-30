@@ -4,25 +4,40 @@ type Props = {}
 
 const Nav = (props: Props) => {
     return (
-        <div>
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0 px-5">
-                <li className="nav-item">
-                    <a className="nav-link" aria-current="page" href="#">Home</a>
+        <nav className="flex justify-between items-center">
+            <a href="#" className="header-logo">
+                <img src="https://shopsonmoi.vn/assets/uploads/files/60be3-logo.png" alt="Logo" style={{ width: 60, height: 60 }} />
+            </a>
+            <ul className="flex items-center uppercase">
+                <li className="py-8 px-4">
+                    <a href="#" className="text-[#334d5e] transition duration-300 hover:text-[#b4073a]">Trang chủ</a>
                 </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">Collections</a>
+                <li className="py-8 px-4">
+                    <a href="/product" className="text-[#334d5e] transition duration-300 hover:text-[#b4073a]">Son môi</a>
                 </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">Blog</a>
+                <li className="py-8 px-4">
+                    <a href="/#/about" className="text-[#334d5e] transition duration-300 hover:text-[#b4073a]">
+                        Tuyển đại lý, cộng tác viên
+                    </a>
                 </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">About Us</a>
+                <li className="py-8 px-4">
+                    <a href="/#/contact" className="text-[#334d5e] transition duration-300 hover:text-[#b4073a]">Liên hệ</a>
                 </li>
-                <li className="nav-item">
-                    <a className="nav-link" href="#">Contact</a>
+                <li className="py-8 px-4">
+                    <a className="text-[#334d5e] transition duration-300 hover:text-[#b4073a]">
+
+                        <span id="account-email">
+                        </span>
+
+                    </a>
                 </li>
             </ul>
-        </div>
+            <a className="text-black text-3xl relative pt-[6px] pr-[6px]">
+                <i className="fa-solid fa-cart-shopping" />
+                <span className="absolute top-0 right-0 text-white text-base bg-pink-400 rounded-[50%] w-5 h-5 text-center hover:text-[#b4073a]">0</span>
+            </a>
+        </nav>
+
     )
 }
 

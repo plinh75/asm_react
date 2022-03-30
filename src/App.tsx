@@ -3,11 +3,11 @@ import { Routes, Route } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import WebsiteLayout from './pages/layouts/WebsiteLayout'
-import { ProductType } from './types/product'
+import { ProductType } from './types/Product'
 import ProductList from './components/ProductList'
 import { list } from './api/product'
 import ProductDetail from './pages/ProductDetail'
-import "bootstrap/dist/css/bootstrap.min.css"
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(false)

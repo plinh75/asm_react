@@ -1,5 +1,5 @@
 import instance from './instance'
-import { ProductType } from '../types/product'
+import { ProductType } from '../types/Product'
 
 export const create = (product: ProductType) => {
     const url = `/product`
