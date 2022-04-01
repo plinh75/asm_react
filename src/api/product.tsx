@@ -2,7 +2,7 @@ import instance from './instance';
 import { ProductType } from '../types/Product';
 import { isAuthenticated } from '../ultis/localStorage';
 
-const {token,user} = isAuthenticated()
+const user = isAuthenticated()
 
 export const list = () => {
     const url = `/product`;

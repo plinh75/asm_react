@@ -11,11 +11,11 @@ type EditInput = {
 }
 
 type ProductEditProps = {
-    onUpdate: (product:ProductType) => void
+    onUpdate: (product: ProductType) => void
 }
 
 const ProductEdit = (props: ProductEditProps) => {
-    const { register, handleSubmit, formState: {errors}, reset} = useForm<EditInput>();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm<EditInput>();
     const { id } = useParams();
     const navigate = useNavigate();
 
@@ -25,14 +25,12 @@ const ProductEdit = (props: ProductEditProps) => {
             reset(data);
         }
         getProduct();
-    },[]);
+    }, []);
     const onSubmit: SubmitHandler<EditInput> = data => {
         props.onUpdate(data)
         navigate("/admin/product");
     }
-  return (
-    <div>
-        <div>
+    return (
         <div className="form-bg">
             <div className="container">
                 <div className="row">
@@ -43,7 +41,7 @@ const ProductEdit = (props: ProductEditProps) => {
                                 <form className="form-horizontal" onSubmit={handleSubmit(onSubmit)}>
                                     <div className="form-group">
                                         <label>Product Name</label>
-                                        <input type="text" className="form-control" {...register('name', { required: true})}/>
+                                        <input type="text" className="form-control" {...register('name', { required: true })} />
                                         {errors.name && <span>Bắt buộc phải nhập trường này!</span>}
                                     </div>
                                     <div className="form-group">
@@ -62,9 +60,7 @@ const ProductEdit = (props: ProductEditProps) => {
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-  )
+    )
 }
 
 export default ProductEdit

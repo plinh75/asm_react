@@ -32,7 +32,7 @@ const ProductAdmin = (props: ProductAdminProps) => {
                                     </thead>
                                     <tbody>
                                         {props.products.map((item, index) => {
-                                            <tr>
+                                        return <tr>
                                                 <td>
                                                     <div className="d-flex px-2 py-1">
                                                         <div className="d-flex flex-column justify-content-center">
@@ -41,8 +41,6 @@ const ProductAdmin = (props: ProductAdminProps) => {
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    console.log(item.name);
-                                                    
                                                     <p className="text-xs font-weight-bold mb-0">{item.name}</p>
                                                 </td>
                                                 <td>
