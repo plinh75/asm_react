@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 import WebsiteLayout from './pages/layouts/WebsiteLayout'
+import AdminLayout from './pages/layouts/AdminLayout'
 import { ProductType } from './types/Product'
 import ProductList from './components/ProductList'
 import { list } from './api/product'
 import ProductDetail from './pages/ProductDetail'
 import Signup from './pages/Signup'
 import Signin from './pages/Signin'
+import Dashboard from './pages/Dashboard'
 
 function App() {
   const [isLoading, setIsLoading] = useState(false)
@@ -31,6 +33,13 @@ function App() {
 
         <Route path="/signup" element={<Signup/>} />
         <Route path="/signin" element={<Signin/>} />
+
+        //admin
+        <Route path='admin' element={<AdminLayout />}>
+          <Route index element={<Navigate to="dashboard"/>} />
+          <Route path="dashboard" element={<Dashboard />} />
+        </Route>
+
       </Routes>
     </div>
   )

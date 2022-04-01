@@ -7,7 +7,9 @@ const ProductDetail = (props: Props) => {
     const { id } = useParams();
     console.log(id);
   return (
-    <div>ProductDetail</div>
+    <div>
+      
+    </div>
   )
 }
 export default ProductDetail
