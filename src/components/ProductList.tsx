@@ -23,8 +23,6 @@ const ProductList = ({products}: ProductListProps) => {
                         </div>
                     )
                 })}
-
-
             </div>
         </div>
     )
