@@ -2,18 +2,19 @@ import { useEffect, useState } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+import { list, read, remove, update } from './api/product'
+import { ProductType } from './types/Product'
+
 import WebsiteLayout from './pages/layouts/WebsiteLayout'
 import AdminLayout from './pages/layouts/AdminLayout'
-import { ProductType } from './types/Product'
 import ProductList from './components/ProductList'
-import { list } from './api/product'
 import ProductDetail from './pages/ProductDetail'
 import Signup from './pages/Signup'
 import Signin from './pages/Signin'
 import Dashboard from './pages/Dashboard'
+import ProductAdmin from './pages/admin/ProductAdmin'
 
 function App() {
-  const [isLoading, setIsLoading] = useState(false)
   const [products, setProducts] = useState<ProductType[]>([])
 
   useEffect(()=>{
@@ -23,6 +24,12 @@ function App() {
     }
     getProducts()
   }, [])
+
+  //xóa sp
+  const onHandleRemove = async (id:number) => {
+    remove(id)
+    setProducts(products.filter(item => item.id !== id))
+  }
   return (
     <div className="App">
       <Routes>
@@ -38,6 +45,10 @@ function App() {
         <Route path='admin' element={<AdminLayout />}>
           <Route index element={<Navigate to="dashboard"/>} />
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="product"> 
+            <Route index element={<ProductAdmin products={products} onRemove={onHandleRemove} />} />
+            
+          </Route>
         </Route>
 
       </Routes>

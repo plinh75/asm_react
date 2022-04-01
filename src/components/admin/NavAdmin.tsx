@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 type Props = {}
 
 const NavAdmin = (props: Props) => {
     return (
-        <aside className="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+        <nav className="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
             <div className="sidenav-header">
                 <a className="nav-link text-white" href="/">
                     <div className="text-white text-center me-2 d-flex align-items-center">
@@ -24,15 +25,15 @@ const NavAdmin = (props: Props) => {
                         </a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link text-white " href="../pages/tables.html">
+                        <Link className="nav-link text-white " to="/admin/product">
                             <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                                 <i className="material-icons opacity-10">table_view</i>
                             </div>
-                            <span className="nav-link-text ms-1">Tables</span>
-                        </a>
+                            <span className="nav-link-text ms-1">Product List</span>
+                        </Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link text-white " href="../pages/billing.html">
+                        <a className="nav-link text-white " href="">
                             <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
                                 <i className="material-icons opacity-10">receipt_long</i>
                             </div>
@@ -41,7 +42,7 @@ const NavAdmin = (props: Props) => {
                     </li>
                 </ul>
             </div>
-        </aside>
+        </nav>
     )
 }
 

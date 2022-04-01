@@ -456,7 +456,7 @@ const Dashboard = (props: Props) => {
 
                 </div>
             </main>
-            <FooterAdmin />
+            
         </div>
 
   )

@@ -1,35 +1,26 @@
 import React from 'react'
+import Logo from './Logo'
 
 type Props = {}
 
 const Nav = (props: Props) => {
     return (
         <nav className="flex justify-between items-center">
-            <a href="#" className="header-logo">
-                <img src="https://shopsonmoi.vn/assets/uploads/files/60be3-logo.png" alt="Logo" style={{ width: 60, height: 60 }} />
-            </a>
+            <Logo />
             <ul className="flex items-center uppercase">
-                <li className="py-8 px-4">
-                    <a href="#" className="text-[#334d5e] transition duration-300 hover:text-[#b4073a]">Trang chủ</a>
+                <li className="py-5 px-4">
+                    <a href="/" className="text-[#334d5e] transition duration-300 hover:text-[#b4073a]">Trang chủ</a>
                 </li>
-                <li className="py-8 px-4">
+                <li className="py-5 px-4">
                     <a href="/product" className="text-[#334d5e] transition duration-300 hover:text-[#b4073a]">Son môi</a>
                 </li>
-                <li className="py-8 px-4">
+                <li className="py-5 px-4">
                     <a href="/#/about" className="text-[#334d5e] transition duration-300 hover:text-[#b4073a]">
                         Tuyển đại lý, cộng tác viên
                     </a>
                 </li>
-                <li className="py-8 px-4">
+                <li className="py-5 px-4">
                     <a href="/#/contact" className="text-[#334d5e] transition duration-300 hover:text-[#b4073a]">Liên hệ</a>
-                </li>
-                <li className="py-8 px-4">
-                    <a className="text-[#334d5e] transition duration-300 hover:text-[#b4073a]">
-
-                        <span id="account-email">
-                        </span>
-
-                    </a>
                 </li>
             </ul>
             <a className="text-black text-3xl relative pt-[6px] pr-[6px]">

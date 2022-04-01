@@ -3,6 +3,7 @@ import Nav from '../components/Nav'
 import Search from '../components/Search'
 import Logo from './Logo'
 import Info from './Info'
+import Banner from './Banner'
 
 type Props = {}
 
@@ -22,8 +23,9 @@ const Header = (props: Props) => {
         </div>
       </div>
       <header id="header" className="hidden lg:block mt-[44px]">
-        <div className="container">
+        <div className="">
           <Nav />
+          <Banner />
         </div>
       </header>
     </div>

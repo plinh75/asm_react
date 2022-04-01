@@ -7,8 +7,8 @@ type Props = {}
 
 const AdminLayout = (props: Props) => {
   return (
-    <div className="g-sidenav-show  bg-gray-200">
-      <NavAdmin />
+    <div className="">
+      
       <Outlet />
       <FooterAdmin/>
     </div>

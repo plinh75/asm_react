@@ -1,27 +1,34 @@
-import instance from './instance'
-import { ProductType } from '../types/Product'
+import instance from './instance';
+import { ProductType } from '../types/Product';
+import { isAuthenticated } from '../ultis/localStorage';
 
-export const create = (product: ProductType) => {
-    const url = `/product`
-    return instance.post(url, product)
-}
+const {token,user} = isAuthenticated()
 
 export const list = () => {
-    const url = `/product`
+    const url = `/product`;
     return instance.get(url)
 }
 
-export const read = (id:number) => {
-    const url = `/product/${id}`
-    return instance.get(url)
+export const add = (product:ProductType) => {
+    const url = `product/${user._id}`
+    return instance.post(url, product,{
+        headers: {
+            "Authorization": `Bearer ${token}`
+        }
+    })
 }
 
 export const remove = (id:number) => {
-    const url = `/product/${id}`
+    const url = `/product/${id}`;
     return instance.delete(url)
 }
 
-export const update = (product: ProductType) => {
-    const url = `/product/${product.id}`
-    return instance.post(url, product)
+export const read = (id:string|undefined) => {
+    const url = `/product/${id}`;
+    return instance.get(url)
+}
+
+export const update = (product:ProductType) => {
+    const url = `product/${product.id}`;
+    return instance.put(url, product)
 }
