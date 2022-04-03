@@ -18,6 +18,8 @@ import ProductAdd from './pages/ProductAdd'
 import PrivateRouter from './components/PrivateRouter'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Products from './pages/Products'
+import HomePage from './pages/HomePage'
 
 function App() {
   const [products, setProducts] = useState<ProductType[]>([])
@@ -54,8 +56,11 @@ function App() {
     <div className="App">
       <Routes>
         <Route path='/' element={<WebsiteLayout />}>
-          <Route index element={<ProductList products={products} />} />
-          <Route path='/product/:id' element={<ProductDetail />} />
+          <Route index element={<HomePage />} />
+          <Route path='product'> 
+            <Route index element={<Products products={products}/>}/>
+            <Route path='/product/:id' element={<ProductDetail />} />
+          </Route>
           <Route path='/contact' element={<Contact />} />
           <Route path='/about' element={<About />} />
         </Route>

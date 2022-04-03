@@ -6,7 +6,7 @@ const Contact = (props: Props) => {
     return (
         <main id="main" className="mt-[92px] lg:mt-0">
             <div className="bg-center text-2xl md:text-[38px] uppercase text-gray-100 bg-pink-500 text-center mb-6 py-5">
-                Liên hệ
+                LIÊN HỆ
             </div>
             <div className="container">
             </div>

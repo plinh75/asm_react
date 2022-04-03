@@ -2,7 +2,8 @@ import React from 'react'
 import NavAdmin from '../components/admin/NavAdmin'
 import FooterAdmin from '../components/admin/FooterAdmin'
 
-type Props = {}
+type Props = {
+}
 
 const Dashboard = (props: Props) => {
     return (
