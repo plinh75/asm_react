@@ -12,7 +12,6 @@ const WebsiteLayout = (props: Props) => {
     <div className="container">
        <Header/>
        <Outlet/>
-       <Slogan />
        <Footer/>
     </div>
   )

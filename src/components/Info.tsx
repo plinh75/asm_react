@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 type Props = {}
 
@@ -6,28 +7,28 @@ const Info = (props: Props) => {
     return (
         <div>
             <span>
-                <a className="text-white" href="signin">
-                    Signin</a>
+                <Link className="text-white no-underline"to="signin">
+                    Signin</Link>
                 |
             </span>
             <span>
-                <a className="text-white" href="signup">
-                    Signup</a>
+                <Link className="text-white no-underline" to="signup">
+                    Signup</Link>
                 |
             </span>
-            <span>
+            {/* <span>
                 <a className="text-white" id="logout">
                     Logout</a>
-            </span>
+            </span> */}
             <span>
-                <a className="text-white" target="_blank" href="#" title="Shop son môi trên Facebook">
+                <Link className="text-white" target="_blank" to="#" title="Shop son môi trên Facebook">
                     <i className="fa-brands fa-facebook-square" />
-                </a>
+                </Link>
             </span>
             <span>
-                <a className="text-white" target="_blank" href="#" title="Shop son môi trên Instagram">
+                <Link className="text-white" target="_blank" to="#" title="Shop son môi trên Instagram">
                     <i className="fa-brands fa-instagram" />
-                </a>
+                </Link>
             </span>
         </div>
     )

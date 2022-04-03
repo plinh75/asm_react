@@ -16,6 +16,8 @@ import ProductAdmin from './pages/admin/ProductAdmin'
 import ProductEdit from './pages/ProductEdit'
 import ProductAdd from './pages/ProductAdd'
 import PrivateRouter from './components/PrivateRouter'
+import About from './pages/About'
+import Contact from './pages/Contact'
 
 function App() {
   const [products, setProducts] = useState<ProductType[]>([])
@@ -31,10 +33,10 @@ function App() {
   //xóa sp
   const onHandleRemove = async (id: number) => {
     remove(id)
-    setProducts(products.filter(item => item.id !== id))
+    setProducts(products.filter(item => item._id !== id))
   }
   //thêm sp
-  const onHandleAdd = async (product: any) => {
+  const onHandleAdd = async (product: ProductType) => {
     const {data} = await add(product);
     setProducts([...products, data]);
   }
@@ -42,7 +44,7 @@ function App() {
   const onHandleUpdate = async (product: ProductType) => {
     try {
        const {data} = await update(product);
-       setProducts(products.map(item => item.id === data.id ? product : item))
+       setProducts(products.map(item => item._id === data._id ? product : item))
     } catch (error) {
       
     }
@@ -54,6 +56,8 @@ function App() {
         <Route path='/' element={<WebsiteLayout />}>
           <Route index element={<ProductList products={products} />} />
           <Route path='/product/:id' element={<ProductDetail />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/about' element={<About />} />
         </Route>
 
         <Route path="/signup" element={<Signup />} />
@@ -66,7 +70,7 @@ function App() {
           <Route path="product">
             <Route index element={<ProductAdmin products={products} onRemove={onHandleRemove} />} />
             <Route path=":id/edit" element={<ProductEdit onUpdate={onHandleUpdate} />} />
-            {/* <Route path="add" element={<ProductAdd onAdd={onHandleAdd} />} /> */}
+            <Route path="add" element={<ProductAdd onAdd={onHandleAdd} />} />
           </Route>
         </Route>
 

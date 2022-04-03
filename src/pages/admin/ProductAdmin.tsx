@@ -15,11 +15,14 @@ const ProductAdmin = (props: ProductAdminProps) => {
                     <div className="card my-4">
                         <div className="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                             <div className="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-                                <h6 className="text-white text-capitalize ps-3">Authors table</h6>
+                                <h6 className="text-white text-capitalize ps-3">Product List</h6>
                             </div>
                         </div>
                         <div className="card-body px-0 pb-2">
                             <div className="table-responsive p-0">
+                            <button className="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                                <Link to="/admin/product/add" className="text-white text-capitalize">Add Product</Link>
+                            </button>
                                 <table className="table align-items-center mb-0">
                                     <thead>
                                         <tr>
@@ -50,12 +53,12 @@ const ProductAdmin = (props: ProductAdminProps) => {
                                                     <p className="text-xs font-weight-bold mb-0">{item.img}</p>
                                                 </td>
                                                 <td className="align-middle">
-                                                    <Link to={`/admin/product/${item.id}/edit`} className="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                                                    <Link to={`/admin/product/${item._id}/edit`} className="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                                                         Edit
                                                     </Link>
-                                                    {/* <button onClick={() => props.onRemove(item.id)} className="text-secondary font-weight-bold text-xs m-2" data-toggle="tooltip" data-original-title="Edit user">
+                                                    <button onClick={() => props.onRemove(item._id)} className="text-secondary font-weight-bold text-xs m-2" data-toggle="tooltip" data-original-title="Edit user">
                                                         Delete
-                                                    </button> */}
+                                                    </button>
                                                 </td>
                                             </tr>
                                         })}

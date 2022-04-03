@@ -10,16 +10,16 @@ export const list = () => {
 }
 
 export const add = (product:ProductType) => {
-    const url = `product/${user._id}`
-    return instance.post(url, product,{
+    const url = `/product/${user?.user._id}`;
+    return instance.post(url, product, {
         headers: {
-            "Authorization": `Bearer ${token}`
+          "Authorization": `Bearer ${user?.token}`
         }
-    })
+      })
 }
 
-export const remove = (id:number) => {
-    const url = `/product/${id}`;
+export const remove = (_id:number) => {
+    const url = `/product/${_id}`;
     return instance.delete(url)
 }
 
@@ -29,6 +29,6 @@ export const read = (id:string|undefined) => {
 }
 
 export const update = (product:ProductType) => {
-    const url = `product/${product.id}`;
+    const url = `product/${product._id}`;
     return instance.put(url, product)
 }

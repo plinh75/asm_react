@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from '../components/Banner'
-import ProductList from '../components/ProductList'
+import Slogan from '../components/Slogan'
 
 type Props = {}
 
@@ -8,7 +8,7 @@ const HomePage = (props: Props) => {
   return (
     <div>
         <Banner />
-        <ProductList />
+        <Slogan />
     </div>
   )
 }

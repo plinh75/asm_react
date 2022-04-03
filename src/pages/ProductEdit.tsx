@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useParams, useNavigate } from 'react-router-dom';
-import { read, update } from '../api/product';
+import { read } from '../api/product';
 import { ProductType } from '../types/Product';
 
 type EditInput = {
@@ -50,9 +50,11 @@ const ProductEdit = (props: ProductEditProps) => {
                                     </div>
                                     <div className="form-group">
                                         <label>Image</label>
-                                        <input type="text" className="form-control" {...register('img')} />
+                                        <input type="file" className="form-control" {...register('img')} />
                                     </div>
-                                    <button className="btn add">Update</button>
+                                    <button className="bg-gradient-primary text-white shadow-primary border-radius-lg py-3 px-4">
+                                       Update
+                                    </button>
                                 </form>
                             </div>
                         </div>

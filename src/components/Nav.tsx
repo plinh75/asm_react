@@ -1,5 +1,6 @@
 import React from 'react'
 import Logo from './Logo'
+import {Link} from 'react-router-dom'
 
 type Props = {}
 
@@ -9,18 +10,18 @@ const Nav = (props: Props) => {
             <Logo />
             <ul className="flex items-center uppercase">
                 <li className="py-5 px-4">
-                    <a href="/" className="text-[#334d5e] transition duration-300 hover:text-[#b4073a]">Trang chủ</a>
+                    <Link to="/" className="text-[#334d5e] transition duration-300 hover:text-[#b4073a] no-underline">Trang chủ</Link>
                 </li>
                 <li className="py-5 px-4">
-                    <a href="/product" className="text-[#334d5e] transition duration-300 hover:text-[#b4073a]">Son môi</a>
+                    <Link to="/product" className="text-[#334d5e] transition duration-300 hover:text-[#b4073a] no-underline">Son môi</Link>
                 </li>
                 <li className="py-5 px-4">
-                    <a href="/#/about" className="text-[#334d5e] transition duration-300 hover:text-[#b4073a]">
+                    <Link to="/about" className="text-[#334d5e] transition duration-300 hover:text-[#b4073a] no-underline">
                         Tuyển đại lý, cộng tác viên
-                    </a>
+                    </Link>
                 </li>
                 <li className="py-5 px-4">
-                    <a href="/#/contact" className="text-[#334d5e] transition duration-300 hover:text-[#b4073a]">Liên hệ</a>
+                    <Link to="/contact" className="text-[#334d5e] transition duration-300 hover:text-[#b4073a] no-underline">Liên hệ</Link>
                 </li>
             </ul>
             <a className="text-black text-3xl relative pt-[6px] pr-[6px]">

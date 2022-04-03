@@ -25,7 +25,6 @@ const Header = (props: Props) => {
       <header id="header" className="hidden lg:block mt-[44px]">
         <div className="">
           <Nav />
-          <Banner />
         </div>
       </header>
     </div>
