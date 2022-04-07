@@ -8,7 +8,7 @@ type Props = {}
 const AdminLayout = (props: Props) => {
   return (
     <div className="">
-      
+      <NavAdmin />
       <Outlet />
       <FooterAdmin/>
     </div>
