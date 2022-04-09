@@ -7,7 +7,7 @@ type Props = {}
 
 const WebsiteLayout = (props: Props) => {
   return (
-    <div className="container">
+    <div className="g-sidenav-show container">
        <Header/>
        <Outlet/>
        <Footer/>

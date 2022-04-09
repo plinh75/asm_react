@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import ProductList from '../components/ProductList'
-import {ProductType} from '../types/Product'
+import { ProductType } from '../types/Product'
 
 type ProductProps = {
   products: ProductType[]
@@ -9,43 +9,40 @@ type ProductProps = {
 
 const Products = (props: ProductProps) => {
   return (
-    <div>
+
+    <div className="">
       <div className="bg-center text-2xl md:text-[38px] uppercase text-gray-100 bg-pink-500 text-center mb-6 py-5">
         DANH SÁCH SẢN PHẨM
       </div>
-      {/* <nav className="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark" id="sidenav-main">
-        <hr className="horizontal light mt-0 mb-2" />
-        <div className="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link text-white" href="">
-                <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                  <i className="material-icons opacity-10">dashboard</i>
-                </div>
-                <span className="nav-link-text ms-1"></span>
-              </a>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-white " to="/admin/product">
-                <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                  <i className="material-icons opacity-10">table_view</i>
-                </div>
-                <span className="nav-link-text ms-1"></span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-white " href="">
-                <div className="text-white text-center me-2 d-flex align-items-center justify-content-center">
-                  <i className="material-icons opacity-10">receipt_long</i>
-                </div>
-                <span className="nav-link-text ms-1"></span>
-              </a>
-            </li>
-          </ul>
+      <div className="grid grid-cols-12 pb-5 gap-4">
+        <div className="col-span-4">
+          <nav className="navbar navbar-vertical bg-pink-500 border border-radius-lg">
+            <div className="container-fluid">
+              <a className="navbar-brand text-white" href="/product">DANH MỤC SẢN PHẨM</a>
+              <button className="navbar-toggler bg-secondary bg-gradient bg-opacity-50"type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon" />
+              </button>
+              <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li className="nav-item">
+                    <a className="nav-link" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li className="nav-item">
+                    <a className="nav-link" href="#">Link</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         </div>
-      </nav> */}
-      <ProductList products={props.products} />
+        <div className="col-span-8">
+          <ProductList products={props.products} />
+        </div>
+      </div>
+
+
     </div>
+
 
   )
 }
