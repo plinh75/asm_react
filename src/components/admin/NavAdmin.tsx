@@ -5,7 +5,7 @@ type Props = {}
 
 const NavAdmin = (props: Props) => {
     return (
-        <nav className="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3   bg-gradient-dark" id="sidenav-main">
+        <nav className="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark" id="sidenav-main">
             <div className="sidenav-header">
                 <a className="nav-link text-white" href="/">
                     <div className="text-white text-center me-2 d-flex align-items-center">

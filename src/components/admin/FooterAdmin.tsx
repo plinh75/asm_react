@@ -4,7 +4,7 @@ type Props = {}
 
 const FooterAdmin = (props: Props) => {
     return (
-        <footer className="footer py-4  ">
+        <footer className="footer py-4  " >
             <div className="container-fluid">
                 <div className="row align-items-center justify-content-lg-between">
                     <div className="col-lg-6 mb-lg-0 mb-4">
@@ -33,7 +33,7 @@ const FooterAdmin = (props: Props) => {
                     </div>
                 </div>
             </div>
-        </footer>
+        </footer >
     )
 }
 
