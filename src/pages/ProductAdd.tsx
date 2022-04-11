@@ -52,7 +52,6 @@ const ProductAdd = (props: ProductAddProps) => {
                 </div>
             </div>
         </div>
-
     )
 }
 export default ProductAdd

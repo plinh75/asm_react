@@ -18,7 +18,7 @@ const Signin = () => {
     const onSubmit: SubmitHandler<SigninInput> = async data => {
         const {data:user} = await signin(data)
         authenticated(user, () => {
-            navigate('/')
+            navigate('/admin')
         })
     }
     return (
