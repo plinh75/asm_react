@@ -9,26 +9,34 @@ export const list = () => {
     return instance.get(url)
 }
 
-export const add = (product:ProductType) => {
+export const add = (product: ProductType) => {
     const url = `/product/${user?.user._id}`;
     return instance.post(url, product, {
         headers: {
-          "Authorization": `Bearer ${user?.token}`
+            "Authorization": `Bearer ${user?.token}`
         }
-      })
+    })
 }
 
-export const remove = (_id:number) => {
-    const url = `/product/${_id}`;
-    return instance.delete(url)
+export const remove = (_id: number) => {
+    const url = `/product/${user?.user._id}/${_id}`;
+    return instance.delete(url, {
+        headers: {
+            "Authorization": `Bearer ${user?.token}`
+        }
+    })
 }
 
-export const read = (id:string|undefined) => {
+export const read = (id: string | undefined) => {
     const url = `/product/${id}`;
     return instance.get(url)
 }
 
-export const update = (product:ProductType) => {
-    const url = `product/${product._id}`;
-    return instance.put(url, product)
+export const update = (product: ProductType) => {
+    const url = `product/${user?.user._id}/${product._id}`;
+    return instance.put(url, product, {
+        headers: {
+            "Authorization": `Bearer ${user?.token}`
+        }
+    })
 }
