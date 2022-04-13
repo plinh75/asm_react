@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import {isAuthenticated} from '../../ultis/localStorage'
 
 type Props = {}
 
 const NavAdmin = (props: Props) => {
+    const user= isAuthenticated()
     return (
         <nav className="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 bg-gradient-dark" id="sidenav-main">
             <div className="sidenav-header">
@@ -11,6 +13,7 @@ const NavAdmin = (props: Props) => {
                     <div className="text-white text-center me-2 d-flex align-items-center">
                         <i className="material-icons opacity-10">homepage</i>
                     </div>
+                    <div className="text-white">Hello {user?.user.name}</div>
                 </a>
             </div>
             <hr className="horizontal light mt-0 mb-2" />
